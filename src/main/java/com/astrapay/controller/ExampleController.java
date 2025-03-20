@@ -26,6 +26,11 @@ public class ExampleController {
         this.exampleService = exampleService;
     }
 
+    @GetMapping("/")
+    public ResponseEntity<String> root() {
+        return ResponseEntity.ok("Welcome to My Spring Boot API!");
+    }
+    
     @GetMapping("/hello")
     @ApiOperation(value = "Say Hello")
     @ApiResponses(
@@ -34,7 +39,7 @@ public class ExampleController {
             }
     )
     public ResponseEntity<String> sayHello(@RequestParam String name, @RequestParam String description) {
-        log.info("Incoming hello Request from " + name);
+        // log.info("Incoming hello Request from " + name);
 
         try {
             ExampleDto exampleDto = new ExampleDto();
