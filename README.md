@@ -565,3 +565,8 @@ public @interface CheckSum {
     Class<? extends Payload>[] payload() default {};
 }
 ```
+
+![Notes App Screenshot get](assets/get.png)
+![Notes App Screenshot post](assets/post.png)
+![Notes App Screenshot put](assets/put.png)
+![Notes App Screenshot delete](assets/delete.png)
